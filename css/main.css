@@ -96,6 +96,36 @@ textarea {
    ========================================================================== */
 
 
+/*Main page layout and styling*/
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+h1 {
+    font-family: 'Economica', serif;
+    font-size: 10em;
+    line-height: 1em;
+    text-align: center;
+    padding: .5em;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Economica', sans-serif;
+    font-size: 2em;
+    line-height: .9em;
+    padding: .5em;
+}
+
+h3 {
+    font-family: 'Economica', sans-serif;
+}
+h4 {
+    font-family: 'Ultra', serif;
+    text-transform: uppercase;
+}
+
 
 
 
