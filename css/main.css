@@ -107,13 +107,14 @@ h1 {
     font-size: 10em;
     line-height: 1em;
     text-align: center;
-    padding: .5em;
+    padding: .3em;
     margin: 0 auto;
 }
 
 h2 {
     font-family: 'Economica', sans-serif;
-    font-size: 2em;
+    text-transform: capitalize;
+    font-size: 1.5em;
     line-height: .9em;
     padding: .5em;
 }
@@ -121,9 +122,54 @@ h2 {
 h3 {
     font-family: 'Economica', sans-serif;
 }
+
 h4 {
     font-family: 'Ultra', serif;
     text-transform: uppercase;
+}
+
+nav {
+    width: 100%;
+}
+ul {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+}
+
+li {
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    list-style: none;
+    text-align: center;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#month {
+    text-align: center;
+    padding: 5%;
+    font-size: 5em;
+}
+
+#in-season-list ul {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;   
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.item {
+  width: 10%;
 }
 
 

@@ -664,7 +664,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Artichokes",
+      "name": "artichokes",
       "when_in_season": [
           false,
           false,
@@ -682,7 +682,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Arugula",
+      "name": "arugula",
       "when_in_season": [
           true,
           true,
@@ -700,7 +700,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Asparagus",
+      "name": "asparagus",
       "when_in_season": [
           false,
           true,
@@ -718,7 +718,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Beets",
+      "name": "beets",
       "when_in_season": [
           true,
           true,
@@ -736,7 +736,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Bitter melon",
+      "name": "bitter melon",
       "when_in_season": [
           false,
           false,
@@ -754,7 +754,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Bok choy",
+      "name": "bok choy",
       "when_in_season": [
           true,
           true,
@@ -772,7 +772,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Broccoli",
+      "name": "broccoli",
       "when_in_season": [
           true,
           true,
@@ -790,7 +790,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Broccoli rabe",
+      "name": "broccoli rabe",
       "when_in_season": [
           true,
           true,
@@ -808,7 +808,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Brussels sprouts",
+      "name": "brussels sprouts",
       "when_in_season": [
           true,
           true,
@@ -826,7 +826,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Burdock",
+      "name": "burdock",
       "when_in_season": [
           false,
           false,
@@ -844,7 +844,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Cabbage",
+      "name": "cabbage",
       "when_in_season": [
           true,
           true,
@@ -862,7 +862,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Cactus pads",
+      "name": "cactus pads",
       "when_in_season": [
           false,
           false,
@@ -880,7 +880,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Cardoons",
+      "name": "cardoons",
       "when_in_season": [
           true,
           true,
@@ -898,7 +898,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Carrots",
+      "name": "carrots",
       "when_in_season": [
           true,
           true,
@@ -916,7 +916,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Cauliflower",
+      "name": "cauliflower",
       "when_in_season": [
           true,
           true,
@@ -934,25 +934,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Celeriac",
-      "when_in_season": [
-          false,
-          false,
-          false,
-          true,
-          true,
-          true,
-          true,
-          true,
-          true,
-          true,
-          true,
-          true
-      ]
-  },
-  {
-      "type": "vegetables",
-      "name": "Celery",
+      "name": "celeriac",
       "when_in_season": [
           false,
           false,
@@ -970,7 +952,25 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Chard",
+      "name": "celery",
+      "when_in_season": [
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+      ]
+  },
+  {
+      "type": "vegetables",
+      "name": "chard",
       "when_in_season": [
           true,
           true,
@@ -988,7 +988,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Chicory",
+      "name": "chicory",
       "when_in_season": [
           true,
           true,
@@ -1006,7 +1006,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Collards",
+      "name": "collards",
       "when_in_season": [
           true,
           true,
@@ -1024,7 +1024,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Corn",
+      "name": "corn",
       "when_in_season": [
           false,
           false,
@@ -1042,7 +1042,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Cress",
+      "name": "cress",
       "when_in_season": [
           true,
           true,
@@ -1060,7 +1060,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Cucumbers",
+      "name": "cucumbers",
       "when_in_season": [
           false,
           false,
@@ -1078,7 +1078,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Dandelion greens",
+      "name": "dandelion greens",
       "when_in_season": [
           true,
           true,
@@ -1096,7 +1096,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Eggplant",
+      "name": "eggplant",
       "when_in_season": [
           false,
           false,
@@ -1114,7 +1114,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Endive",
+      "name": "endive",
       "when_in_season": [
           true,
           true,
@@ -1132,7 +1132,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Fava beans",
+      "name": "fava beans",
       "when_in_season": [
           false,
           false,
@@ -1150,7 +1150,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Fava greens",
+      "name": "fava greens",
       "when_in_season": [
           true,
           true,
@@ -1168,7 +1168,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Fennel",
+      "name": "fennel",
       "when_in_season": [
           true,
           true,
@@ -1186,7 +1186,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Garlic",
+      "name": "garlic",
       "when_in_season": [
           true,
           true,
@@ -1204,7 +1204,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Ginger root",
+      "name": "ginger root",
       "when_in_season": [
           false,
           false,
@@ -1222,7 +1222,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Green beans",
+      "name": "green beans",
       "when_in_season": [
           false,
           false,
@@ -1240,7 +1240,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Green garlic",
+      "name": "green garlic",
       "when_in_season": [
           false,
           true,
@@ -1258,7 +1258,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Herbs",
+      "name": "herbs",
       "when_in_season": [
           true,
           true,
@@ -1276,7 +1276,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Horseradish",
+      "name": "horseradish",
       "when_in_season": [
           false,
           true,
@@ -1294,7 +1294,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Jicama",
+      "name": "jicama",
       "when_in_season": [
           false,
           false,
@@ -1312,7 +1312,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Kale",
+      "name": "kale",
       "when_in_season": [
           true,
           true,
@@ -1330,7 +1330,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Kohlrabi",
+      "name": "kohlrabi",
       "when_in_season": [
           true,
           true,
@@ -1348,7 +1348,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Komatsuna",
+      "name": "komatsuna",
       "when_in_season": [
           false,
           false,
@@ -1366,7 +1366,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Lambsquarters",
+      "name": "lambsquarters",
       "when_in_season": [
           true,
           true,
@@ -1384,7 +1384,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Leeks",
+      "name": "leeks",
       "when_in_season": [
           true,
           true,
@@ -1402,7 +1402,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Lettuce",
+      "name": "lettuce",
       "when_in_season": [
           true,
           true,
@@ -1420,7 +1420,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Mizuna",
+      "name": "mizuna",
       "when_in_season": [
           true,
           true,
@@ -1438,7 +1438,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Mushrooms",
+      "name": "mushrooms",
       "when_in_season": [
           true,
           true,
@@ -1456,7 +1456,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Mustard greens",
+      "name": "mustard greens",
       "when_in_season": [
           true,
           true,
@@ -1474,7 +1474,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Nettles",
+      "name": "nettles",
       "when_in_season": [
           true,
           true,
@@ -1492,7 +1492,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Okra",
+      "name": "okra",
       "when_in_season": [
           false,
           false,
@@ -1510,7 +1510,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Onions",
+      "name": "onions",
       "when_in_season": [
           true,
           true,
@@ -1528,7 +1528,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Orach",
+      "name": "orach",
       "when_in_season": [
           true,
           true,
@@ -1546,7 +1546,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Parsnips",
+      "name": "parsnips",
       "when_in_season": [
           true,
           true,
@@ -1564,7 +1564,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Pea shoots",
+      "name": "pea shoots",
       "when_in_season": [
           true,
           true,
@@ -1582,7 +1582,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Peas",
+      "name": "peas",
       "when_in_season": [
           false,
           false,
@@ -1600,7 +1600,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Peppers, chile",
+      "name": "peppers, chile",
       "when_in_season": [
           false,
           false,
@@ -1618,7 +1618,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Peppers, sweet",
+      "name": "peppers, sweet",
       "when_in_season": [
           false,
           false,
@@ -1636,7 +1636,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Potatoes",
+      "name": "potatoes",
       "when_in_season": [
           false,
           false,
@@ -1654,7 +1654,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Purslane",
+      "name": "purslane",
       "when_in_season": [
           false,
           false,
@@ -1672,7 +1672,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Radishes",
+      "name": "radishes",
       "when_in_season": [
           true,
           true,
@@ -1690,7 +1690,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Rutabagas",
+      "name": "rutabagas",
       "when_in_season": [
           true,
           true,
@@ -1708,7 +1708,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Salsify",
+      "name": "salsify",
       "when_in_season": [
           false,
           false,
@@ -1726,7 +1726,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Scallions",
+      "name": "scallions",
       "when_in_season": [
           true,
           true,
@@ -1744,7 +1744,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Shallots",
+      "name": "shallots",
       "when_in_season": [
           false,
           false,
@@ -1762,7 +1762,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Shelling beans",
+      "name": "shelling beans",
       "when_in_season": [
           false,
           false,
@@ -1780,7 +1780,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Spinach",
+      "name": "spinach",
       "when_in_season": [
           true,
           true,
@@ -1798,7 +1798,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Sprouts",
+      "name": "sprouts",
       "when_in_season": [
           true,
           true,
@@ -1816,7 +1816,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Squash, summer",
+      "name": "squash, summer",
       "when_in_season": [
           false,
           false,
@@ -1834,7 +1834,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Squash, winter",
+      "name": "squash, winter",
       "when_in_season": [
           false,
           false,
@@ -1852,7 +1852,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Sunchokes",
+      "name": "sunchokes",
       "when_in_season": [
           true,
           true,
@@ -1870,7 +1870,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Sweet potatoes",
+      "name": "sweet potatoes",
       "when_in_season": [
           false,
           false,
@@ -1888,7 +1888,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Taro root",
+      "name": "taro root",
       "when_in_season": [
           true,
           true,
@@ -1906,7 +1906,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Tatsoi",
+      "name": "tatsoi",
       "when_in_season": [
           true,
           true,
@@ -1924,7 +1924,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Tomatillos",
+      "name": "tomatillos",
       "when_in_season": [
           false,
           false,
@@ -1942,7 +1942,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Tomatoes",
+      "name": "tomatoes",
       "when_in_season": [
           false,
           false,
@@ -1960,7 +1960,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Turnips",
+      "name": "turnips",
       "when_in_season": [
           true,
           true,
@@ -1978,7 +1978,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "Yacon",
+      "name": "yacon",
       "when_in_season": [
           false,
           false,
@@ -2000,9 +2000,9 @@ var produce = [
 
 
 
-// var jq = document.createElement('script');
+// var jq = document.createelement('script');
 // jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js";
-// document.getElementsByTag"name"('head')[0].appendChild(jq);
+// document.getelementsbytag"name"('head')[0].appendchild(jq);
 
 
 
@@ -2014,7 +2014,7 @@ var produce = [
 // 	this_fruit."name" = fruit.trim()
 // 	seasonality = []
 //   $(this).find(".month").each(function() {
-//     seasonality.push($(this).hasClass('season'))
+//     seasonality.push($(this).hasclass('season'))
 //   })
 //   this_fruit."when_in_season" = seasonality
 //   everything.push(this_fruit)
