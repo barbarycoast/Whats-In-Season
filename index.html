@@ -7,7 +7,10 @@
         <meta name="What's in season?" content="A pretty and easy way to see what kinds of fruits and vegetables are in season near you.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/produce.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/vendor/modernizr-2.8.3.min.js"></script>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Economica:400,700|Ultra' rel='stylesheet' type='text/css'>
@@ -27,53 +30,37 @@
             </header>
 
             <main>
-                <section id="january">
-                    <h3>January</h3>
-                </section>
-                <section id="february">
-                    <h3>February</h3>
-                </section>
-                <section id="march">
-                    <h3>March</h3>                    
-                </section>
-                <section id="april">
-                    <h3>April</h3>
-                </section>
-                <section id="may">
-                    <h3>May</h3>   
-                </section>
-                <section id="june">
-                    <h3>June</h3> 
-                </section>
-                <section id="july">
-                    <h3>July</h3>
-                </section>
-                <section id="august">
-                    <h3>August</h3>
-                </section>
-                <section id="september">
-                    <h3>September</h3>
-                </section>
-                <section id="october">
-                    <h3>October</h3>
-                </section>
-                <section id="november">
-                    <h3>November</h3>
-                </section>
-                <section id="december">
-                    <h3>December</h3>
-                </section>
-                <h2>
-                    All information on when these fruits, vegetables and nuts are in season comes from <a href="http://www.cuesa.org">CUESA</a>, the Center for Urban Education About Sustainable Agriculture.
-                </h2>
-                <section class="option-buttons">
+                <nav>
+                    <ul>
+                        <li id="january">January</li>
+                        <li id="february">February</li>
+                        <li id="march">March</li>
+                        <li id="april">April</li>
+                        <li id="may">May</li>
+                        <li id="june">June</li>
+                        <li id="july">July</li>
+                        <li id="august">August</li>
+                        <li id="september">September</li>
+                        <li id="october">October</li>
+                        <li id="november">November</li>
+                        <li id="december">December</li>
+                    </ul>
+                </nav>
+                <div id="month"></div>
+                <div id="in-season-list"></div>
+                <div class="option-buttons">
                     <button>Choose a different month</button>
                     <button>Look up a fruit or vegetable</button>
-                </section>
+                </div>
             </main>
 
             <footer>
-                <p>&copy;2015 Lauren Kostka.</p>
+                <p>
+                    All information on when these fruits, vegetables and nuts are in season comes from <a href="http://www.cuesa.org">CUESA</a>, the Center for Urban Education About Sustainable Agriculture.
+                </p>
+                <p>
+                    &copy;2015 Lauren Kostka.
+                </p>
             </footer> 
         
         </div><!--end div class container-->    
