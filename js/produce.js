@@ -1600,7 +1600,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "peppers, chile",
+      "name": "chile peppers",
       "when_in_season": [
           false,
           false,
@@ -1618,7 +1618,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "peppers, sweet",
+      "name": "sweet peppers",
       "when_in_season": [
           false,
           false,
@@ -1816,7 +1816,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "squash, summer",
+      "name": "summer squash",
       "when_in_season": [
           false,
           false,
@@ -1834,7 +1834,7 @@ var produce = [
   },
   {
       "type": "vegetables",
-      "name": "squash, winter",
+      "name": "winter squash",
       "when_in_season": [
           false,
           false,
@@ -2000,25 +2000,25 @@ var produce = [
 
 
 
-// var jq = document.createelement('script');
-// jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js";
-// document.getelementsbytag"name"('head')[0].appendchild(jq);
+// // var jq = document.createelement('script');
+// // jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js";
+// // document.getelementsbytag"name"('head')[0].appendchild(jq);
 
 
 
-// everything = []
-// $(".all-months").each(function() {
-// 	fruit = $(this).closest("tr").find("td").eq(0).text()
-// 	this_fruit = {}
-// 	this_fruit."type" = "vegetables"
-// 	this_fruit."name" = fruit.trim()
-// 	seasonality = []
-//   $(this).find(".month").each(function() {
-//     seasonality.push($(this).hasclass('season'))
-//   })
-//   this_fruit."when_in_season" = seasonality
-//   everything.push(this_fruit)
-// })
-// everything
+// // everything = []
+// // $(".all-months").each(function() {
+// // 	fruit = $(this).closest("tr").find("td").eq(0).text()
+// // 	this_fruit = {}
+// // 	this_fruit."type" = "vegetables"
+// // 	this_fruit."name" = fruit.trim()
+// // 	seasonality = []
+// //   $(this).find(".month").each(function() {
+// //     seasonality.push($(this).hasclass('season'))
+// //   })
+// //   this_fruit."when_in_season" = seasonality
+// //   everything.push(this_fruit)
+// // })
+// // everything
 
 

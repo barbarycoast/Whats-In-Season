@@ -7,7 +7,8 @@
         <meta name="What's in season?" content="A pretty and easy way to see what kinds of fruits and vegetables are in season near you.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
         <script type="text/javascript" src="js/produce.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -27,6 +28,13 @@
             </h1>
         </header>
 
+        <main>
+            <div id="month"></div>
+            <div id="in-season-list">
+                <ul></ul>
+            </div>
+        </main>
+
         <nav>
             <ul>
                 <li id="january">January</li>
@@ -44,18 +52,11 @@
             </ul>
         </nav>
 
-        <main>
-            <div id="month"></div>
-            <div id="in-season-list">
-                <ul></ul>
-            </div>
-            <div class="option-buttons">
+        <div class="option-buttons">
                 <button>Choose a different month</button>
                 <button>Look up a fruit or vegetable</button>
-            </div>
-        </main>
-
-
+        </div>
+        
         <footer>
             <p>
                 All information on when these fruits, vegetables and nuts are in season comes from <a href="http://www.cuesa.org">CUESA</a>, the Center for Urban Education About Sustainable Agriculture.

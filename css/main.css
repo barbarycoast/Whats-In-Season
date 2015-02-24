@@ -116,11 +116,13 @@ h2 {
     text-transform: capitalize;
     font-size: 1.5em;
     line-height: .9em;
-    padding: .5em;
+
 }
 
 h3 {
     font-family: 'Economica', sans-serif;
+    margin-top: 0;
+    padding-top:0;
 }
 
 h4 {
@@ -169,77 +171,29 @@ main {
 }
 
 .item {
-  width: 10%;
+  width: 150px;
+  height: 60px;
+  margin: 0px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers:
- * http://juicystudio.com/article/screen-readers-display-none.php
- */
 
 .hidden {
-    display: none !important;
-    visibility: hidden;
+    opacity: 0.05;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+.visible {
+    opacity: 1;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
 
-.invisible {
-    visibility: hidden;
-}
+
+
+
+
+
+
 
 /*
  * Clearfix: contain floats

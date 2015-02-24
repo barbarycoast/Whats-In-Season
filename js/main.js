@@ -2,114 +2,38 @@ var produce;
 
 //return the month (0-11) in the specified date, according to local time. 
 var today = new Date()
-var currentMonth = today.getMonth()
+var currentMonthNumber = today.getMonth()
 
 
 $(document).ready(function() {
   console.log( "ready!" );
-  console.log(currentMonth);
+  console.log(currentMonthNumber);
 
 	//display the month name.
-	if (currentMonth === 0) {
-		$("#month").text("January");
-	} else if (currentMonth === 1) {
-		$("#month").text("February");
-	} else if (currentMonth === 2) {
-		$("#month").text("March");
-	} else if (currentMonth === 3) {
-		$("#month").text("April");
-	} else if (currentMonth === 4) {
-		$("#month").text("May");
-	} else if (currentMonth === 5) {
-		$("#month").text("June");
-	} else if (currentMonth === 6) {
-		$("#month").text("July");
-	} else if (currentMonth === 7) {
-		$("#month").text("August");
-	} else if (currentMonth === 8) {
-		$("#month").text("September");
-	} else if (currentMonth === 9) {
-		$("#month").text("October");
-	} else if (currentMonth === 10) {
-		$("#month").text("November");
-	} else {
-		$("#month").text("December");
-	} 
+ 	var currentMonthName = [ "January", "February", "March", "April", 
+													 "May", "June", "July", "August",
+													 "September", "October", "November", "December"
+													 ]
+	$("#month").text(currentMonthName[currentMonthNumber]);
 	
 	//show what's in season this month.
-	showWhatsInSeason(currentMonth);
+	loadProduceList();
 
-	$("#january").click(function(){
-		$("#month").text("January");
-		showWhatsInSeason(0);
-	});
+	//show what's in season when a different month is clicked.
+	$("nav li").click(function(event){
+		$("#month").text(event.target.innerHTML);
+		var clickedMonthNumber = $(this).index();
+		updateInSeasonList(clickedMonthNumber);
+	}); 
 
-	$("#february").click(function(){
-		$("#month").text("February");
-		showWhatsInSeason(1);
-	});
+}); //end document.ready function
 
-	$("#march").click(function(){
-		$("#month").text("March");
-		showWhatsInSeason(2);
-	});
-
-	$("#april").click(function(){
-		$("#month").text("April");
-		showWhatsInSeason(3);
-	});
-
-	$("#may").click(function(){
-		$("#month").text("May");
-		showWhatsInSeason(4);
-	});
+//Preps list of all produce, then hides all
+function loadProduceList() {	
 	
-	$("#june").click(function(){
-		$("#month").text("June");
-		showWhatsInSeason(5);
-	});
-
-	$("#July").click(function(){
-		$("#month").text("July");
-		showWhatsInSeason(6);
-	});
-
-	$("#august").click(function(){
-		$("#month").text("August");
-		showWhatsInSeason(7);
-	});
-
-	$("#september").click(function(){
-		$("#month").text("September");
-		showWhatsInSeason(8);
-	});
-
-	$("#october").click(function(){
-		$("#month").text("October");
-		showWhatsInSeason(9);
-	});
-
-	$("#november").click(function(){
-		$("#month").text("November");
-		showWhatsInSeason(10);
-	});
-
-	$("#december").click(function(){
-		$("#month").text("December");
-		showWhatsInSeason(11);
-	});
-
-	$("#january").click(function(){
-		$("#month").text("January");
-		showWhatsInSeason(0);
-	});
-
-});
-
-//displays the fruits & veggies in season for a selected month.
-function showWhatsInSeason(monthNumber) {	
 	//grab the Produce array from produce.js
-	produce = produce
+	produce = _.shuffle(produce)
+	
 	var list = $("#in-season-list ul")
 
 	//determine many elements in the produce array
@@ -119,9 +43,7 @@ function showWhatsInSeason(monthNumber) {
 	for (i=0; i<length; i++) {
 		var item_data = produce[i]
 		var name = item_data.name
-
-		//remove spaces from 2-word names
-		var name_id = name.replace(" ", "");
+		var name_id = name.replace(" ", ""); //removes spaces from 2-word names
 
 		//format item name in its own div as an h4
 		var item_html = (
@@ -129,27 +51,67 @@ function showWhatsInSeason(monthNumber) {
 											" <h2> " + name + " </h2>" +
 											" </li> "
 										);
+		list.append(item_html);
+		$("#"+ name_id).addClass("hidden");
+		$("#"+ name_id).css("background-color", "yellow");
 
-		//add items that are in season and remove any that are no longer in season.
-		if ( (item_data.when_in_season[monthNumber] === true) && ($('#' + name_id).length === 0) ) {
-			// var randomDivs = $(".item").get().sort(function(){
-			// 	return Math.round(Math.random())-0.5;
-			// });
-			// $(randomDivs)
 
-			list.append(item_html);
-		}	
-		if (item_data.when_in_season[monthNumber] === false) {
-			$('#' + name_id).remove();
+		if (item_data.when_in_season[currentMonthNumber] === true){
+			$("#"+ name_id).addClass("visible");
+			console.log($("#"+ name_id).selector, "in season", currentMonthNumber);
 		}
+	}	
+}
+
+function updateInSeasonList(clickedMonthNumber) {
+
+	//determine how many elements in the produce list 
+	var list_length = $("#in-season-list li").length
+
+	//go through the entire list to show what's in season and hide what's not
+	for (i=0; i<list_length; i++) {
+		var item_data = produce[i]
+		var name = item_data.name
+		var name_id = name.replace(" ", ""); //removes spaces from 2-word names
+
+		//hide items that are no longer in season and are currently displayed
+		if ( (item_data.when_in_season[clickedMonthNumber] === false) && $("#"+ name_id).hasClass("visible") ){ 
+			$("#"+ name_id).removeClass("visible");			
+			$("#"+ name_id).addClass("hidden");
+			$("#"+ name_id).css("background-color", "blue");
+			console.log($("#"+ name_id).selector, "going out of season", clickedMonthNumber)
+		}	else if ( (item_data.when_in_season[clickedMonthNumber] === false) && $("#"+ name_id).hasClass("hidden") ){ 
+			$("#"+ name_id).css("background-color", "green");
+			console.log($("#"+ name_id).selector, "still not in season", clickedMonthNumber)
+		} else if ( (item_data.when_in_season[clickedMonthNumber] === true) && $("#"+ name_id).hasClass("hidden")  ){ 
+			$("#"+ name_id).removeClass("hidden");			
+			$("#"+ name_id).addClass("visible");
+			$("#"+ name_id).css("background-color", "red");
+			console.log($("#"+ name_id).selector, "coming into season", clickedMonthNumber)
+		} else if ( (item_data.when_in_season[clickedMonthNumber] === true) && $("#"+ name_id).hasClass("visible")  ){ 
+			$("#"+ name_id).css("background-color", "orange");
+		}	else {
+			$("#"+ name_id).css("background-color", "purple");
+		}
+
+		// if ( (item_data.when_in_season[clickedMonthNumber] === true) && $("#"+ name_id).hasClass("visible")  ){ 
+		// 	$("#"+ name_id).css("background-color", "orange");
+		// 	console.log($("#"+ name_id).selector, "already in season", clickedMonthNumber)
+		// }
+
+
+
+
+	
+
+		// if ( (item_data.when_in_season[clickedMonthNumber] === true) && ($("#"+ name_id).is(":visible") === true) ) {
+		// 	$("#"+ name_id).slideUp();
+		// }
+
 	}
 }
 
-function chooseMonth(monthNumber, monthName) {
-	//change "Month" displayed to whatever is chosen
-	$("#month").text(monthName);
-	//add items that are in season and remove any that are no longer in season.
-}
+
 		
 
 
