@@ -4,17 +4,17 @@ var produce;
 var today = new Date()
 var currentMonthNumber = today.getMonth()
 
+var monthNames = [ "January", "February", "March", "April", 
+									 "May", "June", "July", "August",
+									 "September", "October", "November", "December"
+								  ]
 
 $(document).ready(function() {
   console.log( "ready!" );
   console.log(currentMonthNumber);
 
 	//display the month name.
- 	var currentMonthName = [ "January", "February", "March", "April", 
-													 "May", "June", "July", "August",
-													 "September", "October", "November", "December"
-													 ]
-	$("#month").text(currentMonthName[currentMonthNumber]);
+	$("#month").text(monthNames[currentMonthNumber]);
 	
 	//show what's in season this month.
 	loadProduceList();
@@ -25,6 +25,14 @@ $(document).ready(function() {
 		var clickedMonthNumber = $(this).index();
 		updateInSeasonList(clickedMonthNumber);
 	}); 
+
+	$(".up").click(function() {
+		moveMonthNav("up");
+	});
+
+		$(".down").click(function() {
+		moveMonthNav("down");
+	});
 
 }); //end document.ready function
 
@@ -46,19 +54,13 @@ function loadProduceList() {
 		var name_id = name.replace(" ", ""); //removes spaces from 2-word names
 
 		//format item name in its own div as an h4
-		var item_html = (
-											" <li class='item' id='" + name_id + "'> " +
-											" <h2> " + name + " </h2>" +
-											" </li> "
-										);
+		var item_html = (" <li class='item' id='" + name_id + "'> " + name + " </li> " );
 		list.append(item_html);
 		$("#"+ name_id).addClass("hidden");
-		$("#"+ name_id).css("background-color", "yellow");
-
 
 		if (item_data.when_in_season[currentMonthNumber] === true){
+			$("#"+ name_id).removeClass("hidden");
 			$("#"+ name_id).addClass("visible");
-			console.log($("#"+ name_id).selector, "in season", currentMonthNumber);
 		}
 	}	
 }
@@ -78,40 +80,47 @@ function updateInSeasonList(clickedMonthNumber) {
 		if ( (item_data.when_in_season[clickedMonthNumber] === false) && $("#"+ name_id).hasClass("visible") ){ 
 			$("#"+ name_id).removeClass("visible");			
 			$("#"+ name_id).addClass("hidden");
-			$("#"+ name_id).css("background-color", "blue");
-			console.log($("#"+ name_id).selector, "going out of season", clickedMonthNumber)
-		}	else if ( (item_data.when_in_season[clickedMonthNumber] === false) && $("#"+ name_id).hasClass("hidden") ){ 
-			$("#"+ name_id).css("background-color", "green");
-			console.log($("#"+ name_id).selector, "still not in season", clickedMonthNumber)
+
 		} else if ( (item_data.when_in_season[clickedMonthNumber] === true) && $("#"+ name_id).hasClass("hidden")  ){ 
 			$("#"+ name_id).removeClass("hidden");			
 			$("#"+ name_id).addClass("visible");
-			$("#"+ name_id).css("background-color", "red");
-			console.log($("#"+ name_id).selector, "coming into season", clickedMonthNumber)
+
 		} else if ( (item_data.when_in_season[clickedMonthNumber] === true) && $("#"+ name_id).hasClass("visible")  ){ 
-			$("#"+ name_id).css("background-color", "orange");
+			// do nothing
+
+		}	else if ( (item_data.when_in_season[clickedMonthNumber] === false) && $("#"+ name_id).hasClass("hidden") ){ 
+			// do nothing
+		
 		}	else {
-			$("#"+ name_id).css("background-color", "purple");
+						// do nothing
 		}
-
-		// if ( (item_data.when_in_season[clickedMonthNumber] === true) && $("#"+ name_id).hasClass("visible")  ){ 
-		// 	$("#"+ name_id).css("background-color", "orange");
-		// 	console.log($("#"+ name_id).selector, "already in season", clickedMonthNumber)
-		// }
-
-
-
-
-	
-
-		// if ( (item_data.when_in_season[clickedMonthNumber] === true) && ($("#"+ name_id).is(":visible") === true) ) {
-		// 	$("#"+ name_id).slideUp();
-		// }
-
 	}
 }
 
+//functionality for arrow nav
+function moveMonthNav(direction) {
+	var newMonthNumber
+	var selectedMonth = $("#month").text()
+	var selectedMonthNumber = monthNames.indexOf(selectedMonth)
+	if (direction === "up") {
+		newMonthNumber = selectedMonthNumber - 1
+	}
+	if ( (direction === "up") && (selectedMonthNumber === 0) ) {
+		newMonthNumber = 11
+	}
+	if (direction === "down") {
+		newMonthNumber = selectedMonthNumber + 1
+	}
+	if ( (direction === "down") && (selectedMonthNumber === 11) ) {
+		newMonthNumber = 0
+	}
 
+	//replace text box with new month name
+	$("#month").text(monthNames[newMonthNumber]);
+
+	//update in season list
+	updateInSeasonList(newMonthNumber);
+}
 		
 
 

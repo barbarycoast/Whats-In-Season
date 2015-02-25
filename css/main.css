@@ -99,17 +99,31 @@ textarea {
 /*Main page layout and styling*/
 
 .container {
-    width: 80%;
+/*    width: 95%;*/
     margin: 0 auto;
+    color: #d3d3d3;
 }
+
+.header {
+    height: 100vh;
+    background: url("../img/raspberries.jpeg");
+    background-size: cover;
+    border-bottom: 10px solid black;
+}
+
+.color-overlay {
+    background: rgba(79,11,23,.6);
+}
+
 h1 {
     font-family: 'Economica', serif;
     font-size: 10em;
     line-height: 1em;
     text-align: center;
-    padding: .3em;
-    margin: 0 auto;
+    padding: 20%;
+    margin: 0% auto;
 }
+
 
 h2 {
     font-family: 'Economica', sans-serif;
@@ -133,6 +147,35 @@ h4 {
 nav {
     width: 100%;
 }
+
+.month-nav {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#month {
+    text-align: center;
+    padding: 30px;
+    font-size: 5em;
+    border: 1px solid #d3d3d3;
+}
+
+.arrow {
+    width: 0; 
+    height: 0; 
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    margin: 0 auto;
+}
+
+.up {
+    border-bottom: 40px solid #d3d3d3;
+
+}
+.down { 
+    border-top: 40px solid #d3d3d3;
+}
+
 ul {
     width: 90%;
     padding: 0;
@@ -155,12 +198,6 @@ main {
     margin: 0 auto;
 }
 
-#month {
-    text-align: center;
-    padding: 5%;
-    font-size: 5em;
-}
-
 #in-season-list ul {
     width: 100%;
     padding: 0;
@@ -172,19 +209,158 @@ main {
 
 .item {
   width: 150px;
-  height: 60px;
-  margin: 0px;
+  height: 20px;
+  padding-top: 20px;
+    padding-bottom: 20px;
+  margin: 10px;
+  border: 1px solid black;
 }
 
 
 .hidden {
-    opacity: 0.05;
+  -webkit-animation: goHidden 2s 1;
+  opacity: 0;
+}
+
+@-webkit-keyframes goHidden {
+  0% {
+    width: 150px;
+    height: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 10px;
+    opacity: 1;
+  }
+  10% {
+    -webkit-transform: rotate(20deg)
+  }
+    
+  20% {
+    -webkit-transform: rotate(-20deg);
+  }
+  
+  30% {
+    -webkit-transform: rotate(10deg);
+  }
+    
+  40% {
+    -webkit-transform: rotate(-10deg)
+  }
+  
+  50% {
+    -webkit-transform: rotate(5deg)
+  }
+  
+  60% {
+    -webkit-transform: rotate(-5deg)
+  }
+  
+  70% {
+    -webkit-transform: rotate(0deg);
+
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+    100% {
+    width: 0px;
+    height: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 20px 85px;
+    font-size: 0em; 
+    opactiy: 0;
+ }
+
 }
 
 .visible {
-    opacity: 1;
+  -webkit-animation: goVisible 2s 1;
 }
 
+@-webkit-keyframes goVisible {
+  0% {
+    width: 0px;
+    height: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 20px 85px;
+    font-size: 0em;
+  }
+  
+  10% {
+    -webkit-transform: rotate(20deg)
+  }
+    
+  20% {
+    -webkit-transform: rotate(-20deg)
+  }
+  
+  30% {
+    -webkit-transform: rotate(10deg)
+  }
+    
+  40% {
+    -webkit-transform: rotate(-10deg)
+  }
+  
+  50% {
+    -webkit-transform: rotate(5deg)
+  }
+  
+  60% {
+    -webkit-transform: rotate(-5deg)
+  }
+  
+  70% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    width: 150px;
+    height: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 10px;
+    font-size: 1em;
+  }
+}
+
+.visible:hover {
+  -webkit-animation: visibleHover 2s infinite;
+}
+
+@-webkit-keyframes visibleHover {
+  10% {
+    -webkit-transform: rotate(20deg)
+  }
+    
+  20% {
+    -webkit-transform: rotate(-20deg)
+  }
+  
+  30% {
+    -webkit-transform: rotate(10deg)
+  }
+    
+  40% {
+    -webkit-transform: rotate(-10deg)
+  }
+  
+  50% {
+    -webkit-transform: rotate(5deg)
+  }
+  
+  60% {
+    -webkit-transform: rotate(-5deg)
+  }
+  
+  70% {
+    -webkit-transform: rotate(0deg)
+  }
+}
 
 
 
