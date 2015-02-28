@@ -105,10 +105,10 @@ textarea {
 }
 
 .header {
-    height: 100vh;
+/*    height: 100vh;
     background: url("../img/raspberries.jpeg");
     background-size: cover;
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid black;*/
 }
 
 .color-overlay {
@@ -119,9 +119,12 @@ h1 {
     font-family: 'Economica', serif;
     font-size: 10em;
     line-height: 1em;
-    text-align: center;
-    padding: 20%;
+/*    text-align: center;
+*/    width: 40%;
+    padding: 50px;
     margin: 0% auto;
+    float: left;
+    border: 1px solid black;
 }
 
 
@@ -149,8 +152,10 @@ nav {
 }
 
 .month-nav {
-    width: 500px;
+    padding: 50px;
     margin: 0 auto;
+    float: left;
+    border: 1px solid black;
 }
 
 #month {
